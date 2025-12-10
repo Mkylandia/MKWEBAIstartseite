@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Startseite</title>
+    <!-- Icons von FontAwesome laden -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Verknüpfung zum CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts für schöne Schriftart -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Wetter Widget -->
+        <div id="weather-container" class="glass-card">
+            <i class="fa-solid fa-cloud" id="weather-icon"></i>
+            <div>
+                <span id="temperature">--°C</span>
+                <span id="weather-desc">Lade...</span>
+            </div>
+        </div>
+
+        <!-- Uhrzeit und Datum -->
+        <div class="time-section">
+            <h1 id="clock">00:00:00</h1>
+            <p id="date">Wochentag, Tag. Monat Jahr</p>
+        </div>
+
+        <!-- Suchleiste -->
+        <div class="search-box glass-card">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" id="search-input" placeholder="Google Suche..." onkeydown="handleSearch(event)">
+        </div>
+
+        <!-- Favoriten Links (Hier kannst du Links ändern) -->
+        <div class="links-grid">
+            <a href="https://www.youtube.com" class="link-card glass-card">
+                <i class="fa-brands fa-youtube"></i>
+                <span>YouTube</span>
+            </a>
+            <a href="https://chat.openai.com" class="link-card glass-card">
+                <i class="fa-solid fa-robot"></i>
+                <span>ChatGPT</span>
+            </a>
+            <a href="https://www.twitch.tv" class="link-card glass-card">
+                <i class="fa-brands fa-twitch"></i>
+                <span>Twitch</span>
+            </a>
+            <a href="https://www.reddit.com" class="link-card glass-card">
+                <i class="fa-brands fa-reddit-alien"></i>
+                <span>Reddit</span>
+            </a>
+            <a href="https://mail.google.com" class="link-card glass-card">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Gmail</span>
+            </a>
+            <a href="https://github.com" class="link-card glass-card">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </a>
+        </div>
+
+        <!-- Theme Switcher Button -->
+        <button id="theme-btn" class="glass-card" onclick="changeTheme()">
+            <i class="fa-solid fa-palette"></i> Design ändern
+        </button>
+    </div>
+
+    <!-- Verknüpfung zum JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
