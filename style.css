@@ -1,0 +1,192 @@
+/* Grundlegende Variablen (Standard: Lila/Schwarz) */
+:root {
+    --bg-color: #050505;
+    --card-bg: rgba(30, 30, 30, 0.6);
+    --text-color: #ffffff;
+    --accent-color: #bb86fc; /* Helles Neon-Lila */
+    --accent-glow: rgba(187, 134, 252, 0.4);
+    --font-main: 'Outfit', sans-serif;
+    --bg-image: radial-gradient(circle at top right, #2a0a3d, transparent 40%),
+                radial-gradient(circle at bottom left, #120524, transparent 40%);
+}
+
+/* Thema: Cyber Blue */
+body.theme-blue {
+    --bg-color: #000814;
+    --accent-color: #00d4ff;
+    --accent-glow: rgba(0, 212, 255, 0.4);
+    --bg-image: radial-gradient(circle at top, #001f3f, transparent 50%);
+}
+
+/* Thema: Forest Green */
+body.theme-green {
+    --bg-color: #051405;
+    --accent-color: #00ff88;
+    --accent-glow: rgba(0, 255, 136, 0.3);
+    --bg-image: radial-gradient(circle at center, #0a2e18, transparent 60%);
+}
+
+/* Thema: Sunset Orange */
+body.theme-orange {
+    --bg-color: #140505;
+    --accent-color: #ff6b6b;
+    --accent-glow: rgba(255, 107, 107, 0.4);
+    --bg-image: linear-gradient(45deg, #2b0808, #000000);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: var(--bg-image);
+    background-attachment: fixed;
+    color: var(--text-color);
+    font-family: var(--font-main);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: background 0.5s ease;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Glassmorphism Effekt für Karten */
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+/* Wetter Widget */
+#weather-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 25px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+#weather-icon {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+/* Uhrzeit Sektion */
+.time-section {
+    margin-bottom: 40px;
+}
+
+#clock {
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px var(--accent-glow);
+    margin-bottom: 5px;
+}
+
+#date {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Suchleiste */
+.search-box {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+    padding: 12px 20px;
+}
+
+.search-box i {
+    color: var(--accent-color);
+    margin-right: 15px;
+}
+
+#search-input {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    width: 100%;
+    outline: none;
+    font-family: var(--font-main);
+}
+
+/* Links Grid */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.link-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text-color);
+    height: 100px;
+    cursor: pointer;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.link-card i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+    transition: color 0.3s;
+}
+
+.link-card span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Theme Button */
+#theme-btn {
+    cursor: pointer;
+    color: white;
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+#theme-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Responsiv für Handys */
+@media (max-width: 600px) {
+    #clock { font-size: 3.5rem; }
+    .links-grid { grid-template-columns: repeat(3, 1fr); }
+}
