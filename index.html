@@ -3,73 +3,490 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Startseite</title>
-    <!-- Icons von FontAwesome laden -->
+    <title>MCS 700 | Robustes VIS-NIR Prozessspektrometer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Verknüpfung zum CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts für schöne Schriftart -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <span class="logo-icon"><i class="fas fa-microscope"></i></span>
+                    <span class="logo-text">ZEISS Spectroscopy</span>
+                </a>
+                <div class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#benefits" class="nav-link">Vorteile</a></li>
+                        <li class="nav-item"><a href="#highlights" class="nav-link">Highlights</a></li>
+                        <li class="nav-item"><a href="#specifications" class="nav-link">Spezifikationen</a></li>
+                        <li class="nav-item"><a href="#accessories" class="nav-link">Zubehör</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Kontakt</a></li>
+                    </ul>
+                    <div class="nav-cta">
+                        <a href="#contact" class="btn btn-primary">Anfrage stellen</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-    <div class="container">
-        <!-- Wetter Widget -->
-        <div id="weather-container" class="glass-card">
-            <i class="fa-solid fa-cloud" id="weather-icon"></i>
-            <div>
-                <span id="temperature">--°C</span>
-                <span id="weather-desc">Lade...</span>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="category-badge">Spektrometer Systeme</span>
+                <h1 class="hero-title">MCS 700</h1>
+                <p class="hero-subtitle">Robustes VIS-NIR Prozessspektrometer</p>
+                <p class="hero-description">Unsere kompletten VIS-NIR Spektrometer-Lösungen können für verschiedene Anwendungen konfiguriert werden, um Schichteigenschaften sowohl in Batch- als auch in Inline-Produktionsprozessen zu messen.</p>
+                <div class="hero-benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-bolt benefit-icon"></i>
+                        <span class="benefit-text">Einfache Integration</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-tachometer-alt benefit-icon"></i>
+                        <span class="benefit-text">Schnell</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-check-circle benefit-icon"></i>
+                        <span class="benefit-text">Präzise</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="device-frame">
+                    <img src="https://via.placeholder.com/600x600/1a237e/ffffff?text=MCS+700" alt="MCS 700 Spektrometer" class="device-image">
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Uhrzeit und Datum -->
-        <div class="time-section">
-            <h1 id="clock">00:00:00</h1>
-            <p id="date">Wochentag, Tag. Monat Jahr</p>
+    <!-- Benefits Section -->
+    <section id="benefits" class="section benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Zuverlässige Echtzeit-Informationen</h2>
+                <p class="section-subtitle">Behalten Sie Ihren Prozess stets im Blick</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Zuverlässige Prozessunterstützung</h3>
+                        <p>ZEISS MCS 700 Spektrometer sind das ideale System, um Ihren Beschichtungsprozess in Echtzeit zuverlässig zu unterstützen. Sie verfügen über ein durchgehendes Bussystem bis zum Messkopf, was den Integrationsaufwand erheblich reduziert.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Vielfältige Schnittstellen</h3>
+                        <p>Wir bieten eine breite Palette an Schnittstellen, die Ihnen eine Komplettlösung bieten, die für verschiedene Anwendungen konfiguriert werden kann. Die MCS 700 Familie ermöglicht die Verbindung zusätzlicher Spektrometer oder Lampenmodule.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h3>Anpassbare Lösungen</h3>
+                        <p>Die Wahl liegt bei Ihnen: ZEISS MCS 700 Spektrometer können entweder mit ThinProcess® Software verwendet oder für Ihr eigenes System zusammen mit passenden Messköpfen über das ZEISS OSIS SDK maßgeschneidert werden.</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Suchleiste -->
-        <div class="search-box glass-card">
-            <i class="fa-solid fa-search"></i>
-            <input type="text" id="search-input" placeholder="Google Suche..." onkeydown="handleSearch(event)">
+    <!-- Highlights Section -->
+    <section id="highlights" class="section highlights-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Entdecken Sie die Details</h2>
+                <p class="section-subtitle">Klicken Sie auf die Markierungen im Bild, um mehr Informationen zu erhalten</p>
+            </div>
+            <div class="interactive-image-container">
+                <div class="image-wrapper">
+                    <img src="https://via.placeholder.com/1200x600/283593/ffffff?text=MCS+700+Interfaces" alt="MCS 700 mit Interface-Beschreibungen" class="interactive-image">
+                    <div class="marker marker-1" data-info="marker1">
+                        <i class="fas fa-circle"></i>
+                        <div class="info-tooltip" id="marker1">
+                            <h4>SMA-Koppler</h4>
+                            <p>Optischer "Eingangsanschluss" für einen Messkopf</p>
+                        </div>
+                    </div>
+                    <div class="marker marker-2" data-info="marker2">
+                        <i class="fas fa-circle"></i>
+                        <div class="info-tooltip" id="marker2">
+                            <h4>RJ 45 Kommunikationsanschluss</h4>
+                            <p>Interne Kommunikation mit Steuerungscomputer</p>
+                        </div>
+                    </div>
+                    <div class="marker marker-3" data-info="marker3">
+                        <i class="fas fa-circle"></i>
+                        <div class="info-tooltip" id="marker3">
+                            <h4>Digital in/out (8 Bit)</h4>
+                            <p>Schnittstelle zu Automatisierungsgeräten wie Trigger-Eingang, Systemstatus und Toleranzwarnungen</p>
+                        </div>
+                    </div>
+                    <div class="marker marker-4" data-info="marker4">
+                        <i class="fas fa-circle"></i>
+                        <div class="info-tooltip" id="marker4">
+                            <h4>CAN-Bus Anschluss</h4>
+                            <p>Stromversorgung und CAN-Bus Anschluss / Brücke zu weiteren MCS 700 Systemen. Die MCS 700 Familie verfügt über ein durchgehendes Bussystem bis zum Messkopf, was den Integrationsaufwand reduziert.</p>
+                        </div>
+                    </div>
+                    <div class="marker marker-5" data-info="marker5">
+                        <i class="fas fa-circle"></i>
+                        <div class="info-tooltip" id="marker5">
+                            <h4>Stromversorgung</h4>
+                            <p>Für Messköpfe mit interner Lichtquelle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Favoriten Links (Hier kannst du Links ändern) -->
-        <div class="links-grid">
-            <a href="https://www.youtube.com" class="link-card glass-card">
-                <i class="fa-brands fa-youtube"></i>
-                <span>YouTube</span>
-            </a>
-            <a href="https://chat.openai.com" class="link-card glass-card">
-                <i class="fa-solid fa-robot"></i>
-                <span>ChatGPT</span>
-            </a>
-            <a href="https://www.twitch.tv" class="link-card glass-card">
-                <i class="fa-brands fa-twitch"></i>
-                <span>Twitch</span>
-            </a>
-            <a href="https://www.reddit.com" class="link-card glass-card">
-                <i class="fa-brands fa-reddit-alien"></i>
-                <span>Reddit</span>
-            </a>
-            <a href="https://mail.google.com" class="link-card glass-card">
-                <i class="fa-solid fa-envelope"></i>
-                <span>Gmail</span>
-            </a>
-            <a href="https://github.com" class="link-card glass-card">
-                <i class="fa-brands fa-github"></i>
-                <span>GitHub</span>
-            </a>
+    <!-- Specifications Section -->
+    <section id="specifications" class="section specifications-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technische Spezifikationen</h2>
+            </div>
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="spectrometer">Spektrometer</button>
+                    <button class="tab-btn" data-tab="lamp">Fasergekoppelte Lampe</button>
+                </div>
+                <div class="tab-content">
+                    <div id="spectrometer" class="tab-pane active">
+                        <div class="specs-table">
+                            <div class="specs-header">
+                                <div class="specs-cell specs-title"></div>
+                                <div class="specs-cell specs-model">
+                                    MCS 721 / MCS 722 / MCS 723<br>
+                                    <span class="specs-subline">(die letzte Ziffer gibt die Anzahl der Messkanäle an)</span>
+                                </div>
+                                <div class="specs-cell specs-model">
+                                    MCS 731 / MCS 732<br>
+                                    <span class="specs-subline">(die letzte Ziffer gibt die Anzahl der Messkanäle an)</span>
+                                </div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Spektralbereich<sup>(1)</sup></div>
+                                <div class="specs-cell">340 - 1050 nm</div>
+                                <div class="specs-cell">340 - 1650 nm</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Polychromator</div>
+                                <div class="specs-cell">MMS 1</div>
+                                <div class="specs-cell">MMS1 & PGS</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Anzahl Dioden</div>
+                                <div class="specs-cell">256</div>
+                                <div class="specs-cell">512</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Mittlere spektrale Pixelpitch</div>
+                                <div class="specs-cell">3.3 nm / VIS</div>
+                                <div class="specs-cell">3.3 nm / VIS, 3.0 NIR</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Faseranschluss</div>
+                                <div class="specs-cell">SMA</div>
+                                <div class="specs-cell">SMA</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Schutzklasse</div>
+                                <div class="specs-cell">IP54, Schutzklasse III</div>
+                                <div class="specs-cell">IP54, Schutzklasse III</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Abmessungen (BxHxT)</div>
+                                <div class="specs-cell">120 x 120 x 370 mm<sup>3</sup></div>
+                                <div class="specs-cell">120 x 120 x 370 mm<sup>3</sup></div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Gewicht</div>
+                                <div class="specs-cell">4.2 / 4.5 / 4.8 kg</div>
+                                <div class="specs-cell">4.7 / 5.4 kg</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Stromversorgung</div>
+                                <div class="specs-cell">24 V DC (12 - 36)</div>
+                                <div class="specs-cell">24 V DC (12 - 36)</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Betriebstemperatur</div>
+                                <div class="specs-cell">5 ... 45 °C</div>
+                                <div class="specs-cell">5 ... 45 °C</div>
+                            </div>
+                            <div class="specs-footer">
+                                <p><sup>(1)</sup> Der Messbereich des Systems hängt von der Kombination aus Lichtquelle, Messkopf, Lichtleitern und Spektrometer ab. Angegeben ist der maximale Wellenlängenbereich des Spektrometers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="lamp" class="tab-pane">
+                        <div class="specs-table">
+                            <div class="specs-header">
+                                <div class="specs-cell specs-title"></div>
+                                <div class="specs-cell specs-model">
+                                    CLH 711
+                                </div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Spektralbereich<sup>(1)</sup></div>
+                                <div class="specs-cell">380 - 2500 nm (340 - 2500 nm mit Filter)</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Shutter</div>
+                                <div class="specs-cell">integrierter Shutter</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Filter (umschaltbar)</div>
+                                <div class="specs-cell">integrierter Filter ("Blue Enhancement")</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Faseranschluss</div>
+                                <div class="specs-cell">1 x SMA</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Schutzklasse</div>
+                                <div class="specs-cell">IP54, Schutzklasse III</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Abmessungen (BxHxT)</div>
+                                <div class="specs-cell">120 x 120 x 370 mm<sup>3</sup></div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Gewicht</div>
+                                <div class="specs-cell">3.8 kg</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Stromversorgung</div>
+                                <div class="specs-cell">24 V DC (12 - 36)</div>
+                            </div>
+                            <div class="specs-row">
+                                <div class="specs-cell specs-title">Betriebstemperatur</div>
+                                <div class="specs-cell">5 - 45 °C</div>
+                            </div>
+                            <div class="specs-footer">
+                                <p><sup>(1)</sup> Der Messbereich des Systems hängt von der Kombination aus Lichtquelle, Messkopf, Lichtleitern und Spektrometer ab. Angegeben ist der maximale Wellenlängenbereich der Lampe.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Theme Switcher Button -->
-        <button id="theme-btn" class="glass-card" onclick="changeTheme()">
-            <i class="fa-solid fa-palette"></i> Design ändern
-        </button>
-    </div>
+    <!-- Accessories Section -->
+    <section id="accessories" class="section accessories-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Zubehör für MCS 700</h2>
+                <p class="section-subtitle">Erweitern Sie die Möglichkeiten Ihres Systems</p>
+            </div>
+            <div class="accessories-grid">
+                <div class="accessory-card">
+                    <div class="accessory-image">
+                        <img src="https://via.placeholder.com/400x250/3949ab/ffffff?text=OFR+A10c" alt="OFR A10c">
+                    </div>
+                    <div class="accessory-content">
+                        <h3 class="accessory-title">OFR A10c</h3>
+                        <p class="accessory-description">Mit dem OFR A10c Messkopf ist es möglich, absolute Transmissions- und Reflexionsmessungen durchzuführen. Es sind keine Referenzmaterialien mit bekannten Eigenschaften erforderlich.</p>
+                    </div>
+                </div>
+                <div class="accessory-card">
+                    <div class="accessory-image">
+                        <img src="https://via.placeholder.com/400x250/3949ab/ffffff?text=OFR+155" alt="OFR 155">
+                    </div>
+                    <div class="accessory-content">
+                        <h3 class="accessory-title">OFR 155</h3>
+                        <p class="accessory-description">Der OFR155 Winkelfarbmesskopf ermöglicht Inline-Messungen und wird zur Farbauswertung und spektralen Reflexionsmessung mit einem Beobachtungswinkel von 55° verwendet.</p>
+                    </div>
+                </div>
+                <div class="accessory-card">
+                    <div class="accessory-image">
+                        <img src="https://via.placeholder.com/400x250/3949ab/ffffff?text=OFR+104" alt="OFR 104">
+                    </div>
+                    <div class="accessory-content">
+                        <h3 class="accessory-title">OFR 104</h3>
+                        <p class="accessory-description">Der OFR 104 Standard-Farbmesskopf ermöglicht Inline-Messungen und wird zur Farbauswertung und spektralen Reflexionsmessung mit einem Beobachtungswinkel von 4° verwendet.</p>
+                    </div>
+                </div>
+                <div class="accessory-card">
+                    <div class="accessory-image">
+                        <img src="https://via.placeholder.com/400x250/3949ab/ffffff?text=OFR+H2c" alt="OFR H2c">
+                    </div>
+                    <div class="accessory-content">
+                        <h3 class="accessory-title">OFR H2c</h3>
+                        <p class="accessory-description">OFR H2c ist eine Beleuchtungskugel mit interner redundanter Lichtquelle für spektrale Transmissionsmessung von spiegelnden Proben.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Verknüpfung zum JavaScript -->
-    <script src="script.js"></script>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kontakt & Service</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card service-card">
+                    <div class="card-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Service & Support</h3>
+                        <p>Benötigen Sie Installations-, Anwendungs- oder Wartungsunterstützung?</p>
+                        <a href="#" class="btn btn-secondary">Mehr erfahren</a>
+                    </div>
+                </div>
+                <div class="contact-card inquiry-card">
+                    <div class="card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Kontaktanfrage</h3>
+                        <p>Haben Sie Fragen zu unseren Produkten oder benötigen Sie eine maßgeschneiderte Konfiguration für Ihre Anwendung?</p>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <input type="text" placeholder="Vorname *" required>
+                                <input type="text" placeholder="Nachname *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="E-Mail *" required>
+                                <select required>
+                                    <option value="">Standort auswählen *</option>
+                                    <option value="de">Deutschland</option>
+                                    <option value="at">Österreich</option>
+                                    <option value="ch">Schweiz</option>
+                                    <option value="us">USA</option>
+                                    <option value="other">Andere</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select required>
+                                    <option value="">Anfrage betrifft *</option>
+                                    <option value="sales">Verkaufsanfrage</option>
+                                    <option value="service">Serviceanfrage</option>
+                                    <option value="custom">Maßgeschneiderte Konfiguration</option>
+                                    <option value="other">Sonstiges</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <textarea placeholder="Ihre Anfrage *" rows="4" required></textarea>
+                            </div>
+                            <div class="form-group full-width optional-info">
+                                <h4>Optionale Informationen</h4>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Firma">
+                                <input type="text" placeholder="Position">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Postleitzahl">
+                                <input type="text" placeholder="Stadt">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Adresse">
+                                <input type="tel" placeholder="Telefon">
+                            </div>
+                            <div class="form-group full-width">
+                                <input type="text" placeholder="Ihr Tätigkeitsbereich">
+                            </div>
+                            <div class="form-group full-width privacy-note">
+                                <p>Die im Kontaktformular eingegebenen Informationen werden verwendet, um Ihre Anfrage zu beantworten. Weitere Informationen zur Datenverarbeitung bei ZEISS finden Sie in unserer <a href="#">Datenschutzerklärung</a>.</p>
+                            </div>
+                            <button type="submit" class="btn btn-primary submit-btn">Absenden</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="contact-card distributors-card">
+                    <div class="card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Händler & Partner</h3>
+                        <p>Finden Sie Partner und Händler in Ihrer Nähe</p>
+                        <a href="#" class="btn btn-secondary">Händler finden</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-microscope"></i></span>
+                        <span class="logo-text">ZEISS Spectroscopy</span>
+                    </a>
+                    <p>Präzisionsinstrumente für wissenschaftliche und industrielle Anwendungen</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Produkte</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Spektrometer Systeme</a></li>
+                        <li><a href="#">Spektrometer Module</a></li>
+                        <li><a href="#">Optische Gitter</a></li>
+                        <li><a href="#">ThinProcess® Software</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Unternehmen</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Über uns</a></li>
+                        <li><a href="#">Karriere</a></li>
+                        <li><a href="#">Presse</a></li>
+                        <li><a href="#">Compliance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <ul class="footer-links contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Carl-Zeiss-Str. 8, 73447 Oberkochen</li>
+                        <li><i class="fas fa-phone"></i> +49 7364 955-0</li>
+                        <li><i class="fas fa-envelope"></i> info.spectroscopy@zeiss.com</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    &copy; 2023 Carl Zeiss AG. Alle Rechte vorbehalten.
+                </div>
+                <div class="legal-links">
+                    <a href="#">Impressum</a>
+                    <a href="#">Datenschutz</a>
+                    <a href="#">Cookie-Einstellungen</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 </html>
